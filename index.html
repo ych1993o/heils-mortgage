@@ -70,27 +70,18 @@
                     <div class="form-group">
                         <label data-i18n="property_price">Property Price</label>
                         <div class="input-wrapper">
-                            <span class="currency-symbol" id="currencySymbol1">$</span>
                             <input type="number" id="propertyPrice" value="300000" min="0" step="1000">
+                            <span class="currency-symbol currency-symbol-end" id="currencySymbol1">$</span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label data-i18n="down_payment">Down Payment</label>
                         <div class="input-wrapper">
-                            <span class="currency-symbol" id="currencySymbol2">$</span>
                             <input type="number" id="downPayment" value="60000" min="0" step="1000">
+                            <span class="currency-symbol currency-symbol-end" id="currencySymbol2">$</span>
                         </div>
                         <span class="hint" data-i18n="down_payment_hint">20% of loan amount recommended</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label data-i18n="loan_amount">Loan Amount</label>
-                        <div class="input-wrapper">
-                            <span class="currency-symbol" id="currencySymbol3">$</span>
-                            <input type="number" id="loanAmount" value="240000" min="0" step="1000" readonly>
-                        </div>
-                        <span class="hint" data-i18n="loan_amount_hint">Auto-calculated: Property Price - Down Payment</span>
                     </div>
 
                     <div class="form-group">

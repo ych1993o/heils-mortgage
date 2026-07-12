@@ -202,8 +202,8 @@ function calculateMortgage() {
     const loanTermYears = parseInt(document.getElementById('loanTerm').value) || 30;
     const currency = document.getElementById('currency').value;
     
-    // Get loan amount from auto-calculated field
-    const principal = parseFloat(document.getElementById('loanAmount').value) || 0;
+    // Calculate loan principal (property price - down payment)
+    const principal = Math.max(0, propertyPrice - downPayment);
     
     if (principal <= 0) {
         alert(currentLang === 'zh' ? '贷款金额必须大于零！请检查首付金额。' : 'Loan amount must be greater than zero! Please check down payment.');
@@ -331,18 +331,8 @@ function updateCurrencySymbols() {
     const symbol = currencySymbols[currency] || '$';
     const symbol1 = document.getElementById('currencySymbol1');
     const symbol2 = document.getElementById('currencySymbol2');
-    const symbol3 = document.getElementById('currencySymbol3');
     if (symbol1) symbol1.textContent = symbol;
     if (symbol2) symbol2.textContent = symbol;
-    if (symbol3) symbol3.textContent = symbol;
-}
-
-// ===== Auto-calculate Loan Amount =====
-function updateLoanAmount() {
-    const propertyPrice = parseFloat(document.getElementById('propertyPrice').value) || 0;
-    const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
-    const loanAmount = Math.max(0, propertyPrice - downPayment);
-    document.getElementById('loanAmount').value = loanAmount;
 }
 
 // ===== Initialize =====
@@ -380,10 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Currency change - update symbols
     document.getElementById('currency').addEventListener('change', updateCurrencySymbols);
-    
-    // Auto-calculate loan amount when property price or down payment changes
-    document.getElementById('propertyPrice').addEventListener('input', updateLoanAmount);
-    document.getElementById('downPayment').addEventListener('input', updateLoanAmount);
     
     // Enter key to calculate
     document.querySelectorAll('input').forEach(input => {

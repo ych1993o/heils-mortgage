@@ -175,11 +175,14 @@ body {
 }
 
 .currency-symbol {
-    position: absolute;
-    left: 12px;
     color: var(--text-secondary);
     font-weight: 600;
     z-index: 1;
+}
+
+.currency-symbol-end {
+    position: absolute;
+    right: 12px;
 }
 
 .percent-symbol {
@@ -189,8 +192,12 @@ body {
     font-weight: 600;
 }
 
-.input-wrapper input {
+.input-wrapper input:not([type="number"]) {
     padding-left: 28px;
+}
+
+.input-wrapper input[type="number"] {
+    padding-right: 28px;
 }
 
 input[type="number"],
