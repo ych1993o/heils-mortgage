@@ -6,6 +6,8 @@ const translations = {
         calculator_title: "Mortgage Payment Calculator",
         calculator_subtitle: "Calculate your monthly mortgage payments",
         loan_amount: "Loan Amount",
+        loan_amount_hint: "Auto-calculated: Property Price - Down Payment",
+        property_price: "Property Price",
         down_payment: "Down Payment",
         down_payment_hint: "20% of loan amount recommended",
         interest_rate: "Interest Rate",
@@ -67,7 +69,9 @@ const translations = {
         ad_text: "广告",
         calculator_title: "房贷月供计算器",
         calculator_subtitle: "计算您的每月房贷还款额",
-        loan_amount: "房屋总价",
+        property_price: "房屋总价",
+        loan_amount: "贷款金额",
+        loan_amount_hint: "自动计算：房屋总价 - 首付金额",
         down_payment: "首付金额",
         down_payment_hint: "建议首付比例为20%",
         interest_rate: "年利率",
@@ -192,14 +196,14 @@ function switchLanguage(lang) {
 // ===== Mortgage Calculation =====
 function calculateMortgage() {
     // Get input values
-    const propertyPrice = parseFloat(document.getElementById('loanAmount').value) || 0;
+    const propertyPrice = parseFloat(document.getElementById('propertyPrice').value) || 0;
     const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
     const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
     const loanTermYears = parseInt(document.getElementById('loanTerm').value) || 30;
     const currency = document.getElementById('currency').value;
     
-    // Calculate loan principal
-    const principal = Math.max(0, propertyPrice - downPayment);
+    // Get loan amount from auto-calculated field
+    const principal = parseFloat(document.getElementById('loanAmount').value) || 0;
     
     if (principal <= 0) {
         alert(currentLang === 'zh' ? '贷款金额必须大于零！请检查首付金额。' : 'Loan amount must be greater than zero! Please check down payment.');
@@ -321,6 +325,26 @@ function renderSchedule(schedule, currency) {
     });
 }
 
+// ===== Update Currency Symbols =====
+function updateCurrencySymbols() {
+    const currency = document.getElementById('currency').value;
+    const symbol = currencySymbols[currency] || '$';
+    const symbol1 = document.getElementById('currencySymbol1');
+    const symbol2 = document.getElementById('currencySymbol2');
+    const symbol3 = document.getElementById('currencySymbol3');
+    if (symbol1) symbol1.textContent = symbol;
+    if (symbol2) symbol2.textContent = symbol;
+    if (symbol3) symbol3.textContent = symbol;
+}
+
+// ===== Auto-calculate Loan Amount =====
+function updateLoanAmount() {
+    const propertyPrice = parseFloat(document.getElementById('propertyPrice').value) || 0;
+    const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+    const loanAmount = Math.max(0, propertyPrice - downPayment);
+    document.getElementById('loanAmount').value = loanAmount;
+}
+
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', function() {
     // Load saved language preference
@@ -354,6 +378,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Calculate button
     document.getElementById('calculateBtn').addEventListener('click', calculateMortgage);
     
+    // Currency change - update symbols
+    document.getElementById('currency').addEventListener('change', updateCurrencySymbols);
+    
+    // Auto-calculate loan amount when property price or down payment changes
+    document.getElementById('propertyPrice').addEventListener('input', updateLoanAmount);
+    document.getElementById('downPayment').addEventListener('input', updateLoanAmount);
+    
     // Enter key to calculate
     document.querySelectorAll('input').forEach(input => {
         input.addEventListener('keypress', function(e) {
@@ -381,5 +412,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Auto-calculate on load
+    updateCurrencySymbols();
     calculateMortgage();
 });
