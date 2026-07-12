@@ -56,7 +56,11 @@ const translations = {
         faq4_q: "How accurate is this calculator?",
         faq4_a: "This calculator provides estimates based on standard formulas. Actual payments may vary depending on your lender's terms and conditions.",
         footer_disclaimer: "Disclaimer: This calculator is for reference only. Please consult your lender for exact figures.",
-        footer_rights: "All rights reserved."
+        footer_rights: "All rights reserved.",
+        about: "About",
+        contact: "Contact",
+        privacy_policy: "Privacy Policy",
+        terms: "Terms"
     },
     zh: {
         title: "房贷计算器",
@@ -114,7 +118,11 @@ const translations = {
         faq4_q: "这个计算器的结果准确吗？",
         faq4_a: "本计算器基于标准公式提供估算值。实际还款额可能因贷款机构的具体条款而有所不同。",
         footer_disclaimer: "免责声明：本计算器仅供参考，具体数据请咨询您的贷款机构。",
-        footer_rights: "保留所有权利。"
+        footer_rights: "保留所有权利。",
+        about: "关于我们",
+        contact: "联系我们",
+        privacy_policy: "隐私政策",
+        terms: "服务条款"
     }
 };
 

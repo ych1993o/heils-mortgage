@@ -600,6 +600,15 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 4px;
 }
 
+.footer-links a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .form-grid {
