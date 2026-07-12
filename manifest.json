@@ -1,0 +1,10 @@
+{
+    "name": "Mortgage Calculator",
+    "short_name": "Mortgage Calc",
+    "description": "Free online mortgage calculator with amortization schedule",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#2563eb",
+    "icons": []
+}

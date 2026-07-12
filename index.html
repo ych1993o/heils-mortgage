@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online mortgage calculator with amortization schedule. Calculate monthly payments, total interest, and loan details. 免费在线房贷计算器，支持等额本息、等额本金计算。">
+    <meta name="keywords" content="mortgage calculator,房贷计算器,loan calculator,home loan,amortization,monthly payment,贷款计算">
+    <meta name="author" content="Mortgage Calculator">
+    <meta property="og:title" content="Mortgage Calculator | 房贷计算器">
+    <meta property="og:description" content="Free online mortgage calculator with amortization schedule. 免费在线房贷计算器。">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>Mortgage Calculator | 房贷计算器</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1960589035364427" crossorigin="anonymous"></script>
+    
+    <link rel="canonical" href="https://heils.top/">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Mortgage Calculator",
+        "alternateName": "房贷计算器",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "description": "Free online mortgage calculator with amortization schedule.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">
+                <span class="logo-icon">🏠</span>
+                <span data-i18n="title">Mortgage Calculator</span>
+            </h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="zh">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Ad -->
+    <div class="ad-container ad-top">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1960589035364427" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <div class="calculator-card">
+                <h2 data-i18n="calculator_title">Mortgage Payment Calculator</h2>
+                <p class="subtitle" data-i18n="calculator_subtitle">Calculate your monthly mortgage payments</p>
+
+                <!-- Input Form -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label data-i18n="loan_amount">Loan Amount</label>
+                        <div class="input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="loanAmount" value="300000" min="0" step="1000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="down_payment">Down Payment</label>
+                        <div class="input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="downPayment" value="60000" min="0" step="1000">
+                        </div>
+                        <span class="hint" data-i18n="down_payment_hint">20% of loan amount recommended</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="interest_rate">Interest Rate</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="interestRate" value="6.5" min="0" max="30" step="0.01">
+                            <span class="percent-symbol">%</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="loan_term">Loan Term</label>
+                        <select id="loanTerm">
+                            <option value="5">5 <span data-i18n="years">years</span></option>
+                            <option value="10">10 <span data-i18n="years">years</span></option>
+                            <option value="15">15 <span data-i18n="years">years</span></option>
+                            <option value="20">20 <span data-i18n="years">years</span></option>
+                            <option value="25">25 <span data-i18n="years">years</span></option>
+                            <option value="30" selected>30 <span data-i18n="years">years</span></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="payment_method">Payment Method</label>
+                        <div class="method-toggle">
+                            <button class="method-btn active" data-method="equal-payment" data-i18n="equal_payment">Equal Payment</button>
+                            <button class="method-btn" data-method="equal-principal" data-i18n="equal_principal">Equal Principal</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="currency">Currency</label>
+                        <select id="currency">
+                            <option value="USD">USD ($)</option>
+                            <option value="CNY">CNY (¥)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="GBP">GBP (£)</option>
+                            <option value="AUD">AUD (A$)</option>
+                            <option value="CAD">CAD (C$)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="SGD">SGD (S$)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="calculate-btn" id="calculateBtn" data-i18n="calculate">Calculate</button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-card" id="resultsCard" style="display:none;">
+                <h2 data-i18n="results_title">Calculation Results</h2>
+                
+                <div class="results-grid">
+                    <div class="result-item highlight">
+                        <span class="result-label" data-i18n="monthly_payment">Monthly Payment</span>
+                        <span class="result-value" id="monthlyPayment">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label" data-i18n="total_loan">Loan Amount</span>
+                        <span class="result-value" id="totalLoan">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label" data-i18n="total_interest">Total Interest</span>
+                        <span class="result-value" id="totalInterest">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label" data-i18n="total_payment">Total Payment</span>
+                        <span class="result-value" id="totalPayment">$0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label" data-i18n="payoff_date">Payoff Date</span>
+                        <span class="result-value" id="payoffDate">-</span>
+                    </div>
+                </div>
+
+                <!-- Payment Chart -->
+                <div class="chart-section">
+                    <h3 data-i18n="payment_breakdown">Payment Breakdown</h3>
+                    <div class="chart-container">
+                        <div class="chart-bar">
+                            <div class="chart-segment principal-segment" id="principalBar">
+                                <span data-i18n="principal">Principal</span>
+                            </div>
+                            <div class="chart-segment interest-segment" id="interestBar">
+                                <span data-i18n="interest">Interest</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color principal-color"></span>
+                                <span data-i18n="principal">Principal</span>
+                                <span id="principalPercent">0%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color interest-color"></span>
+                                <span data-i18n="interest">Interest</span>
+                                <span id="interestPercent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amortization Schedule -->
+                <div class="amortization-section">
+                    <h3 data-i18n="amortization_schedule">Amortization Schedule</h3>
+                    <div class="table-wrapper">
+                        <table class="amortization-table" id="amortizationTable">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="month">Month</th>
+                                    <th data-i18n="payment">Payment</th>
+                                    <th data-i18n="principal_col">Principal</th>
+                                    <th data-i18n="interest_col">Interest</th>
+                                    <th data-i18n="balance">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <button class="toggle-schedule-btn" id="toggleSchedule" data-i18n="show_full_schedule">Show Full Schedule</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Middle Ad -->
+        <div class="ad-container ad-middle">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1960589035364427" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="info-card">
+                <h2 data-i18n="how_it_works">How Mortgage Calculation Works</h2>
+                <div class="info-content" data-i18n="how_it_works_content">
+                    <p>A mortgage calculator helps you estimate your monthly mortgage payments based on the loan amount, interest rate, and loan term. The most common type is the equal payment method (amortization), where you pay the same amount each month.</p>
+                    <p><strong>Equal Payment (等额本息):</strong> Your monthly payment stays the same throughout the loan term. Early payments go mostly toward interest, while later payments go more toward principal.</p>
+                    <p><strong>Equal Principal (等额本金):</strong> Your principal payment stays the same each month, but the total payment decreases over time as the interest portion shrinks.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2 data-i18n="tips_title">Mortgage Tips</h2>
+                <ul class="tips-list">
+                    <li data-i18n="tip1">A larger down payment reduces your loan amount and monthly payments.</li>
+                    <li data-i18n="tip2">Even a 0.5% lower interest rate can save you thousands over the loan term.</li>
+                    <li data-i18n="tip3">Shorter loan terms mean higher monthly payments but less total interest.</li>
+                    <li data-i18n="tip4">Consider additional costs: property tax, insurance, PMI, and HOA fees.</li>
+                    <li data-i18n="tip5">Making extra payments can significantly reduce your total interest.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2 data-i18n="formula_title">Calculation Formula</h2>
+                <div class="formula-content">
+                    <h4 data-i18n="equal_payment_formula">Equal Payment Formula:</h4>
+                    <div class="formula">M = P × [r(1+r)<sup>n</sup>] / [(1+r)<sup>n</sup> - 1]</div>
+                    <p class="formula-desc" data-i18n="formula_desc">Where M = monthly payment, P = principal, r = monthly interest rate, n = total number of months</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Ad -->
+        <div class="ad-container ad-bottom">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1960589035364427" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq1_q">What is a mortgage calculator?</button>
+                    <div class="faq-answer" data-i18n="faq1_a">A mortgage calculator is a tool that helps you estimate your monthly mortgage payments based on the loan amount, interest rate, and loan term.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq2_q">What is the difference between equal payment and equal principal?</button>
+                    <div class="faq-answer" data-i18n="faq2_a">Equal payment (equal installments) keeps your monthly payment constant. Equal principal keeps the principal portion constant, so total payments decrease over time.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq3_q">Does this calculator include property tax and insurance?</button>
+                    <div class="faq-answer" data-i18n="faq3_a">No, this calculator only computes the principal and interest. You should add property tax, insurance, and other fees separately.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="faq4_q">How accurate is this calculator?</button>
+                    <div class="faq-answer" data-i18n="faq4_a">This calculator provides estimates based on standard formulas. Actual payments may vary depending on your lender's terms and conditions.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer_disclaimer">Disclaimer: This calculator is for reference only. Please consult your lender for exact figures.</p>
+            <p>&copy; 2026 Mortgage Calculator. <span data-i18n="footer_rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
