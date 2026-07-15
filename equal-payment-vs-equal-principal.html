@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>等额本息 vs 等额本金哪个更划算？详细对比分析</title>
+<meta name="description" content="详细对比等额本息与等额本金两种房贷还款方式的定义、公式差异、实际案例计算、优缺点及适合人群，帮你做出最划算的选择。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    line-height: 1.8;
+    color: #1e293b;
+    background: #f8fafc;
+  }
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 24px 48px;
+    background: #fff;
+    min-height: 60vh;
+  }
+  header.article-header {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 26px;
+    color: #0f172a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .meta {
+    font-size: 14px;
+    color: #64748b;
+  }
+  h2 {
+    font-size: 21px;
+    color: #0f172a;
+    margin: 32px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid #2563eb;
+  }
+  h3 {
+    font-size: 17px;
+    color: #1e3a8a;
+    margin: 20px 0 10px;
+  }
+  p { margin: 12px 0; }
+  ul, ol { margin: 12px 0; padding-left: 24px; }
+  li { margin: 6px 0; }
+  strong { color: #b91c1c; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  th { background: #eff6ff; color: #1e3a8a; }
+  .formula {
+    background: #f1f5f9;
+    border: 1px dashed #94a3b8;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-family: "Cambria Math", Georgia, serif;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+  .tip {
+    background: #fef9c3;
+    border-left: 4px solid #eab308;
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .calc-link {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .calc-link:hover { background: #1d4ed8; }
+  footer.site-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    border-top: 1px solid #e2e8f0;
+  }
+</style>
+</head>
+<body>
+<nav><div style="max-width:800px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;"><a href="../index.html" style="font-size:20px;text-decoration:none;color:#2563eb;">🏠 房贷计算器</a><a href="../blog.html" style="text-decoration:none;color:#475569;font-size:14px;">← 返回指南</a></div></nav>
+
+<article>
+  <header class="article-header">
+    <h1>等额本息 vs 等额本金哪个更划算？详细对比分析</h1>
+    <p class="meta">发布时间：2026 年 7 月 · 房贷知识 · 阅读约 8 分钟</p>
+  </header>
+
+  <section>
+    <p>申请房贷时，银行都会让你在两种还款方式中二选一：<strong>等额本息</strong>和<strong>等额本金</strong>。很多人面对这个选择一头雾水，听销售人员一句"都差不多"就草草签字，结果几十年下来多还了不少利息。其实这两种方式的计算逻辑、月供结构和总利息差距相当明显，了解清楚后再做决定，能帮你省下数万甚至十几万元。本文将从定义、公式、实际案例和适合人群四个维度做一次彻底的对比。</p>
+  </section>
+
+  <section>
+    <h2>一、两种还款方式的定义</h2>
+    <h3>1. 等额本息</h3>
+    <p>等额本息是指在整个还款期内，每个月的还款总额（本金＋利息）保持固定不变。前期还款中利息占比较大、本金占比较小；随着本金逐渐减少，利息逐月下降，本金逐月上升，但每月总额始终一致。这种方式的好处是月供稳定，便于家庭做长期预算。</p>
+
+    <h3>2. 等额本金</h3>
+    <p>等额本金是指将贷款总额平均分摊到每一个月，每月偿还固定金额的本金，再加上当月剩余本金产生的利息。由于本金逐月减少，利息也逐月递减，因此每月的还款总额呈"前高后低"的阶梯式下降。总利息比等额本息少，但前期还款压力较大。</p>
+  </section>
+
+  <section>
+    <h2>二、计算公式差异</h2>
+    <p>两种方式的核心差异就在于利息的计算基础不同，公式如下：</p>
+    <div class="formula">
+      等额本息月供 = 贷款本金 × 月利率 × (1＋月利率)^期数 ÷ [(1＋月利率)^期数 − 1]
+    </div>
+    <div class="formula">
+      等额本金月供 = (贷款本金 ÷ 期数) ＋ (剩余本金 × 月利率)
+    </div>
+    <p>可以看到，等额本息是把整个贷款期"摊平"成一个固定值，本质上是用更高的总利息换取月供的稳定；等额本金则是每个月实打实还固定本金，利息按实际欠款计算，因此更"省钱"，但前期负担重。</p>
+  </section>
+
+  <section>
+    <h2>三、实际案例对比（贷款 100 万 / 30 年 / 利率 4.2%）</h2>
+    <p>以一套常见配置为例：贷款 100 万元，期限 30 年（360 期），年利率 4.2%（月利率 0.35%）。我们分别用两种方式计算：</p>
+
+    <table>
+      <tr><th>对比项目</th><th>等额本息</th><th>等额本金</th></tr>
+      <tr><td>首月月供</td><td>4,890 元</td><td>6,278 元</td></tr>
+      <tr><td>末月月供</td><td>4,890 元</td><td>2,788 元</td></tr>
+      <tr><td>月供变化</td><td>固定不变</td><td>逐月递减约 9.7 元</td></tr>
+      <tr><td>总还款额</td><td>约 176.0 万元</td><td>约 163.1 万元</td></tr>
+      <tr><td>总利息</td><td>约 76.0 万元</td><td>约 63.1 万元</td></tr>
+      <tr><td>利息差额</td><td colspan="2">等额本金少还约 12.9 万元</td></tr>
+    </table>
+
+    <p>从表格可以直观看出：同样的贷款条件，选择等额本金 30 年累计可以少还近 13 万元利息，但代价是首月要多还约 1,388 元，且前 7～8 年的月供都高于等额本息。这就是"省利息"与"轻压力"之间的权衡。</p>
+    <div class="tip">提示：以上数据为按公式理论计算值，实际以银行系统为准。你可以用我们的 <a href="../index.html">房贷计算器</a> 输入自己的贷款金额、年限和利率，一键生成两种方式的完整还款明细表。</div>
+  </section>
+
+  <section>
+    <h2>四、各自的优缺点</h2>
+    <h3>等额本息的优点</h3>
+    <ul>
+      <li>月供固定，便于家庭长期记账和预算管理；</li>
+      <li>前期月供较低，还款压力小，对刚买房手头紧的家庭更友好；</li>
+      <li>通胀环境下，固定月供的"实际购买力"会随时间下降，越往后越轻松。</li>
+    </ul>
+    <h3>等额本息的缺点</h3>
+    <ul>
+      <li>总利息明显更高，30 年期通常多还 10%～15%；</li>
+      <li>前期还的几乎都是利息，本金减少慢，提前还款时"省利息"的效果不如等额本金明显。</li>
+    </ul>
+    <h3>等额本金的优点</h3>
+    <ul>
+      <li>总利息低，长期看更划算；</li>
+      <li>本金减少快，若日后提前还款更划算；</li>
+      <li>月供逐月下降，越还越轻松，后期财务自由度更高。</li>
+    </ul>
+    <h3>等额本金的缺点</h3>
+    <ul>
+      <li>前期月供高，对收入要求高，可能影响其他消费或投资；</li>
+      <li>月供每月都在变，记账和自动扣款不如固定额方便。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>五、适合人群建议</h2>
+    <ul>
+      <li><strong>选等额本息的人：</strong>收入稳定但不算高、刚工作不久的年轻人、刚需首套房家庭、希望月供可控留出资金做其他投资或生活消费的人群。</li>
+      <li><strong>选等额本金的人：</strong>当前收入较高且未来可能下降（如临近退休）、有较强还款能力、计划中短期内提前还款、希望尽量减少总利息支出的人群。</li>
+      <li><strong>一个折中思路：</strong>如果拿不定主意，可以先用等额本息降低前期压力，等收入提升后通过提前还款来弥补利息差距——但要注意提前还款也有机会成本，需结合自身投资收益率判断。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>六、如何用计算器模拟两种方式</h2>
+    <p>光看文字描述很难有切身感受，强烈建议你亲自用计算器跑一遍自己的真实数据。操作步骤如下：</p>
+    <ol>
+      <li>打开 <a href="../index.html">房贷计算器</a>，输入你的贷款总额、贷款年限和年利率；</li>
+      <li>切换还款方式为"等额本息"，记录月供和总利息；</li>
+      <li>再切换为"等额本金"，对比首月月供、末月月供和总利息；</li>
+      <li>查看逐月还款明细表，重点关注前 5 年的月供差异，评估自己能否承受；</li>
+      <li>结合家庭收入和未来支出规划，做出最终选择。</li>
+    </ol>
+    <a href="../index.html" class="calc-link">立即使用房贷计算器模拟 →</a>
+  </section>
+
+  <section>
+    <h2>结语</h2>
+    <p>等额本息和等额本金没有绝对的"好坏"，只有"是否适合你"。等额本息胜在稳定和低门槛，等额本金胜在省利息和高效率还本。关键是要结合自己的收入结构、未来现金流和还款意愿来综合判断。建议你拿着真实贷款数据，用计算器把两种方案的明细都拉出来，对照自己的月度收支表，答案自然就清晰了。买房是人生最大的财务决策之一，多花十分钟算清楚，绝对值得。</p>
+  </section>
+</article>
+
+<footer class="site-footer">
+  <p>© 2026 heils.top 房贷计算器 · 仅供参考，不构成投资或贷款建议</p>
+</footer>
+</body>
+</html>
