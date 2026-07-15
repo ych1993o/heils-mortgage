@@ -174,6 +174,16 @@ function switchLanguage(lang) {
         }
     });
     
+    // 修复 select option 内的 years 文本
+    const loanTermSelect = document.getElementById('loanTerm');
+    if (loanTermSelect) {
+        const yearsText = translations[lang].years;
+        Array.from(loanTermSelect.options).forEach(option => {
+            const value = option.value;
+            option.textContent = value + ' ' + yearsText;
+        });
+    }
+
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
