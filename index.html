@@ -324,20 +324,29 @@
 <h4 style="margin-top:20px;" data-i18n="equal_principal_formula">Equal Principal Formula (等额本金):</h4>
 <div class="formula-display">
     <div class="formula-row">
+        <span class="formula-equal">M<sub>i</sub> =</span>
         <div class="formula-fraction">
             <div class="formula-numerator">P</div>
             <div class="formula-line"></div>
             <div class="formula-denominator">n</div>
         </div>
-        <span class="formula-equal">+ (P − 已还本金) × r</span>
+        <span class="formula-equal">+ (P − P ×</span>
+        <div class="formula-fraction">
+            <div class="formula-numerator">i − 1</div>
+            <div class="formula-line" style="min-width:40px;"></div>
+            <div class="formula-denominator">n</div>
+        </div>
+        <span class="formula-equal">) × r</span>
     </div>
 </div>
 <div class="formula-vars">
-    <span class="formula-var"><b>M</b> = 月供</span>
+    <span class="formula-var"><b>M<sub>i</sub></b> = 第 i 期月供</span>
     <span class="formula-var"><b>P</b> = 贷款本金</span>
     <span class="formula-var"><b>r</b> = 月利率 (年利率÷12)</span>
     <span class="formula-var"><b>n</b> = 还款总月数</span>
+    <span class="formula-var"><b>i</b> = 当前期数</span>
 </div>
+
 
                 </div>
             </div>
