@@ -34,6 +34,79 @@
         }
     }
     </script>
+<style>
+.formula-display {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 24px 20px;
+    border-radius: 12px;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formula-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.formula-equal {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+    font-family: "Georgia", "Times New Roman", serif;
+}
+.formula-fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formula-numerator {
+    font-size: 1.15rem;
+    color: #1e40af;
+    padding: 4px 16px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 500;
+}
+.formula-line {
+    width: 100%;
+    min-width: 120px;
+    height: 2px;
+    background: #475569;
+    border-radius: 1px;
+}
+.formula-denominator {
+    font-size: 1.15rem;
+    color: #b91c1c;
+    padding: 4px 16px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-weight: 500;
+}
+.formula-vars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.formula-var {
+    font-size: 0.85rem;
+    color: #475569;
+}
+.formula-var b {
+    color: #2563eb;
+}
+@media (max-width: 600px) {
+    .formula-display { padding: 16px 12px; }
+    .formula-equal { font-size: 1.1rem; }
+    .formula-numerator, .formula-denominator { font-size: 1rem; }
+    .formula-vars { flex-direction: column; gap: 8px; }
+}
+</style>
 </head>
 <body>
     <!-- Header -->
@@ -237,9 +310,35 @@
             <div class="info-card">
                 <h2 data-i18n="formula_title">Calculation Formula</h2>
                 <div class="formula-content">
-                    <h4 data-i18n="equal_payment_formula">Equal Payment Formula:</h4>
-                    <div class="formula">M = P × [r(1+r)<sup>n</sup>] / [(1+r)<sup>n</sup> - 1]</div>
-                    <p class="formula-desc" data-i18n="formula_desc">Where M = monthly payment, P = principal, r = monthly interest rate, n = total number of months</p>
+                <h4 data-i18n="equal_payment_formula">Equal Payment Formula (等额本息):</h4>
+<div class="formula-display">
+    <div class="formula-row">
+        <span class="formula-equal">M = P ×</span>
+        <div class="formula-fraction">
+            <div class="formula-numerator">r × (1 + r)<sup>n</sup></div>
+            <div class="formula-line"></div>
+            <div class="formula-denominator">(1 + r)<sup>n</sup> − 1</div>
+        </div>
+    </div>
+</div>
+<h4 style="margin-top:20px;" data-i18n="equal_principal_formula">Equal Principal Formula (等额本金):</h4>
+<div class="formula-display">
+    <div class="formula-row">
+        <div class="formula-fraction">
+            <div class="formula-numerator">P</div>
+            <div class="formula-line"></div>
+            <div class="formula-denominator">n</div>
+        </div>
+        <span class="formula-equal">+ (P − 已还本金) × r</span>
+    </div>
+</div>
+<div class="formula-vars">
+    <span class="formula-var"><b>M</b> = 月供</span>
+    <span class="formula-var"><b>P</b> = 贷款本金</span>
+    <span class="formula-var"><b>r</b> = 月利率 (年利率÷12)</span>
+    <span class="formula-var"><b>n</b> = 还款总月数</span>
+</div>
+
                 </div>
             </div>
         </section>
