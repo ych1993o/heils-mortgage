@@ -1,111 +1,618 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1960589035364427"
-       crossorigin="anonymous"></script>
-  <title>在线工具箱 - 免费实用的在线工具集合</title>
-  <meta name="description" content="提供 JSON 格式化、Base64 编解码、二维码生成、URL 编码解码、密码生成、时间戳转换、字数统计等免费在线工具，简洁高效，无需安装。">
-  <meta name="keywords" content="在线工具,JSON格式化,Base64,二维码生成,URL编码,密码生成,时间戳转换,字数统计,免费工具">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator - Free Online Home Loan Calculator | 房贷计算器</title>
+    <meta name="description" content="Free online mortgage calculator supporting 8 currencies. Calculate monthly payments, view amortization schedules, and compare equal payment vs equal principal methods. 免费在线房贷计算器，支持8种货币，计算月供、查看还款明细。">
+    <meta name="keywords" content="mortgage calculator, home loan calculator, 房贷计算器, 贷款计算器, amortization schedule, monthly payment, 等额本息, 等额本金">
+    <link rel="canonical" href="https://heils.top/">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1960589035364427" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">🔧 在线工具箱</a>
-      <ul class="nav-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="json-formatter.html">JSON 格式化</a></li>
-        <li><a href="base64-tool.html">Base64 工具</a></li>
-        <li><a href="qr-generator.html">二维码生成</a></li>
-        <li><a href="about.html">关于我们</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <main class="container">
-    <section class="page-header">
-      <h1>在线工具箱</h1>
-      <p>免费、好用、无需安装的在线工具集合，所有操作均在浏览器本地完成，保护您的数据隐私</p>
-    </section>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&#127968;</span>
+                <span data-i18n="logo">Mortgage Calculator</span>
+            </a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="guide.html" style="text-decoration:none;color:var(--primary);font-size:0.9rem;font-weight:500;" data-i18n="guide_link">&#128214; 房贷指南 / Mortgage Guide</a>
+                <div class="lang-switch">
+                    <button class="lang-btn active" id="lang-en" onclick="switchLang('en')">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" id="lang-zh" onclick="switchLang('zh')">中文</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="tool-grid">
-      <a href="json-formatter.html" class="tool-card">
-        <div class="tool-icon">📋</div>
-        <h3>JSON 格式化</h3>
-        <p>在线 JSON 格式化、压缩、验证工具，支持语法高亮和错误提示，帮助开发者快速处理和调试 JSON 数据。</p>
-      </a>
-
-      <a href="base64-tool.html" class="tool-card">
-        <div class="tool-icon">🔐</div>
-        <h3>Base64 编解码</h3>
-        <p>Base64 编码与解码工具，支持中文字符和 Unicode 文本，适用于 API 调试、Data URI 生成和 JWT 解析。</p>
-      </a>
-
-      <a href="qr-generator.html" class="tool-card">
-        <div class="tool-icon">📱</div>
-        <h3>二维码生成</h3>
-        <p>在线二维码生成器，输入网址或文本即可生成高清二维码，支持一键下载保存为 PNG 图片。</p>
-      </a>
-
-      <a href="url-encoder.html" class="tool-card">
-        <div class="tool-icon">🔗</div>
-        <h3>URL 编码解码</h3>
-        <p>URL 编码（百分号编码）与解码工具，支持中文等特殊字符的完整编解码转换。</p>
-      </a>
-
-      <a href="password-generator.html" class="tool-card">
-        <div class="tool-icon">🔑</div>
-        <h3>密码生成器</h3>
-        <p>随机安全密码生成工具，使用加密级别的随机算法，可自定义长度和字符类型，保护账户安全。</p>
-      </a>
-
-      <a href="timestamp-converter.html" class="tool-card">
-        <div class="tool-icon">⏰</div>
-        <h3>时间戳转换</h3>
-        <p>Unix 时间戳与日期时间互转工具，自动识别秒级和毫秒级格式，方便开发者调试和日志分析。</p>
-      </a>
-
-      <a href="word-counter.html" class="tool-card">
-        <div class="tool-icon">📝</div>
-        <h3>字数统计</h3>
-        <p>在线字数统计工具，支持中英文字符、单词、行数、段落数统计，适用于写作和内容编辑。</p>
-      </a>
+    <!-- Top Ad -->
+    <div class="ad-container container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1960589035364427"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <section style="margin-top:48px;">
-      <h2 style="font-size:20px;margin-bottom:16px;color:#1e293b;text-align:center;">为什么选择在线工具箱？</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;">
-        <div style="text-align:center;padding:20px;">
-          <div style="font-size:32px;margin-bottom:8px;">🚀</div>
-          <h3 style="font-size:16px;margin-bottom:8px;color:#1e293b;">完全免费</h3>
-          <p style="color:#475569;font-size:14px;line-height:1.6;">所有工具免费使用，无需注册账号，没有使用次数限制，打开即用。</p>
-        </div>
-        <div style="text-align:center;padding:20px;">
-          <div style="font-size:32px;margin-bottom:8px;">🔒</div>
-          <h3 style="font-size:16px;margin-bottom:8px;color:#1e293b;">隐私安全</h3>
-          <p style="color:#475569;font-size:14px;line-height:1.6;">所有数据处理均在您的浏览器本地完成，不会上传到任何服务器，保护您的数据安全。</p>
-        </div>
-        <div style="text-align:center;padding:20px;">
-          <div style="font-size:32px;margin-bottom:8px;">⚡</div>
-          <h3 style="font-size:16px;margin-bottom:8px;color:#1e293b;">无需安装</h3>
-          <p style="color:#475569;font-size:14px;line-height:1.6;">基于网页运行，无需下载安装任何软件，在任何设备的浏览器中都可以直接使用。</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Calculator Section -->
+    <main class="container calculator-section">
 
-  <footer class="footer">
-    <div class="footer-content">
-      <p>在线工具箱 - 免费实用的在线工具集合</p>
-      <div class="footer-links">
-        <a href="about.html">关于我们</a>
-        <a href="privacy.html">隐私政策</a>
-        <a href="terms.html">服务条款</a>
-        <a href="index.html">网站首页</a>
-      </div>
-    </div>
-  </footer>
+        <div class="calculator-card">
+            <h2 data-i18n="calc_title">Mortgage Calculator</h2>
+            <p class="subtitle" data-i18n="calc_subtitle">Calculate your monthly mortgage payment with ease</p>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label data-i18n="label_price">Property Price</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol" id="currency-symbol">$</span>
+                        <input type="number" id="propertyPrice" value="300000" min="0" step="1000" placeholder="e.g. 300000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="label_down">Down Payment</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol" id="currency-symbol-down">$</span>
+                        <input type="number" id="downPayment" value="60000" min="0" step="1000" placeholder="e.g. 60000">
+                    </div>
+                    <span class="hint" data-i18n="hint_down">Typically 20% of property price</span>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="label_rate">Interest Rate</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="interestRate" value="6.5" min="0" step="0.01" placeholder="e.g. 6.5">
+                        <span class="percent-symbol">%</span>
+                    </div>
+                    <span class="hint" data-i18n="hint_rate">Annual interest rate</span>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="label_term">Loan Term</label>
+                    <select id="loanTerm">
+                        <option value="5">5 <span data-i18n="years">years</span></option>
+                        <option value="10">10 <span data-i18n="years">years</span></option>
+                        <option value="15">15 <span data-i18n="years">years</span></option>
+                        <option value="20">20 <span data-i18n="years">years</span></option>
+                        <option value="25">25 <span data-i18n="years">years</span></option>
+                        <option value="30" selected>30 <span data-i18n="years">years</span></option>
+                    </select>
+                </div>
+                <div class="form-group" style="grid-column: span 2;">
+                    <label data-i18n="label_method">Payment Method</label>
+                    <div class="method-toggle">
+                        <button class="method-btn active" id="method-equal-payment" onclick="setMethod('equal-payment')" data-i18n="method_equal_payment">Equal Payment (等额本息)</button>
+                        <button class="method-btn" id="method-equal-principal" onclick="setMethod('equal-principal')" data-i18n="method_equal_principal">Equal Principal (等额本金)</button>
+                    </div>
+                </div>
+                <div class="form-group" style="grid-column: span 2;">
+                    <label data-i18n="label_currency">Currency</label>
+                    <select id="currency" onchange="updateCurrencySymbol()">
+                        <option value="USD" selected>USD ($)</option>
+                        <option value="CNY">CNY (¥)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="GBP">GBP (£)</option>
+                        <option value="AUD">AUD (A$)</option>
+                        <option value="CAD">CAD (C$)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="SGD">SGD (S$)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculate()" data-i18n="btn_calculate">Calculate</button>
+        </div>
+
+        <!-- Middle Ad -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1960589035364427"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Results -->
+        <div class="results-card" id="results" style="display:none;">
+            <h2 data-i18n="results_title">Calculation Results</h2>
+
+            <div class="results-grid">
+                <div class="result-item highlight">
+                    <span class="result-label" data-i18n="result_monthly">Monthly Payment</span>
+                    <span class="result-value" id="monthlyPayment">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label" data-i18n="result_loan">Loan Amount</span>
+                    <span class="result-value" id="loanAmount">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label" data-i18n="result_interest">Total Interest</span>
+                    <span class="result-value" id="totalInterest">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label" data-i18n="result_total">Total Payment</span>
+                    <span class="result-value" id="totalPayment">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label" data-i18n="result_payoff">Payoff Date</span>
+                    <span class="result-value" id="payoffDate">-</span>
+                </div>
+            </div>
+
+            <!-- Principal vs Interest Chart -->
+            <div class="chart-section">
+                <h3 data-i18n="chart_title">Principal vs Interest</h3>
+                <div class="chart-bar">
+                    <div class="chart-segment principal-segment" id="principal-bar" style="width:43.9%;">43.9%</div>
+                    <div class="chart-segment interest-segment" id="interest-bar" style="width:56.1%;">56.1%</div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color principal-color"></span>
+                        <span data-i18n="legend_principal">Principal</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color interest-color"></span>
+                        <span data-i18n="legend_interest">Interest</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amortization Schedule -->
+            <div class="amortization-section">
+                <h3 data-i18n="schedule_title">Amortization Schedule</h3>
+                <div class="table-wrapper" id="table-wrapper">
+                    <table class="amortization-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="col_month">Month</th>
+                                <th data-i18n="col_payment">Payment</th>
+                                <th data-i18n="col_principal">Principal</th>
+                                <th data-i18n="col_interest">Interest</th>
+                                <th data-i18n="col_balance">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="amortization-body">
+                        </tbody>
+                    </table>
+                </div>
+                <button class="toggle-schedule-btn" id="toggle-schedule" onclick="toggleSchedule()" data-i18n="btn_show_all">Show Full Schedule</button>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <!-- How Mortgage Calculation Works -->
+            <div class="info-card">
+                <h2 data-i18n="info_how_title">How Mortgage Calculation Works</h2>
+                <div class="info-content">
+                    <p data-i18n="info_how_p1">A mortgage is a type of loan used to purchase real estate. When you take out a mortgage, you borrow money from a lender and agree to pay it back over a set period, typically 15 to 30 years, with interest. The mortgage payment consists of two main components: principal (the amount you borrowed) and interest (the cost of borrowing).</p>
+                    <p data-i18n="info_how_p2">The interest rate can be fixed (stays the same for the life of the loan) or adjustable (can change periodically). Your monthly payment amount depends on the loan amount, interest rate, loan term, and the repayment method you choose. Understanding these factors is crucial for making an informed decision about your home purchase.</p>
+                </div>
+            </div>
+
+            <!-- Mortgage Tips -->
+            <div class="info-card">
+                <h2 data-i18n="tips_title">Mortgage Tips</h2>
+                <ul class="tips-list">
+                    <li data-i18n="tip_1">Save at least 20% for your down payment to avoid Private Mortgage Insurance (PMI) and get better interest rates.</li>
+                    <li data-i18n="tip_2">Check your credit score before applying - a higher score typically qualifies you for lower interest rates.</li>
+                    <li data-i18n="tip_3">Compare offers from multiple lenders to find the best rate and terms for your situation.</li>
+                    <li data-i18n="tip_4">Consider the total cost of the loan, not just the monthly payment, including closing costs and fees.</li>
+                    <li data-i18n="tip_5">Make extra payments when possible to reduce your total interest and shorten your loan term.</li>
+                </ul>
+            </div>
+
+            <!-- Calculation Formulas -->
+            <div class="info-card formula-content">
+                <h2 data-i18n="formula_title">Calculation Formula</h2>
+
+                <h4 data-i18n="formula_equal_payment_title">Equal Payment (等额本息)</h4>
+                <div class="formula">
+                    M = P &times; [r(1+r)<sup>n</sup>] / [(1+r)<sup>n</sup> - 1]
+                </div>
+                <p class="formula-desc" data-i18n="formula_equal_payment_desc">M = Monthly Payment, P = Loan Amount (Principal), r = Monthly Interest Rate (Annual Rate / 12), n = Total Number of Payments (Years &times; 12)</p>
+
+                <h4 style="margin-top:16px;" data-i18n="formula_equal_principal_title">Equal Principal (等额本金)</h4>
+                <div class="formula">
+                    M<sub>i</sub> = P/n + (P - P&times;(i-1)/n) &times; r
+                </div>
+                <p class="formula-desc" data-i18n="formula_equal_principal_desc">M<sub>i</sub> = Payment for Month i, P = Loan Amount, n = Total Payments, r = Monthly Interest Rate. The principal portion is fixed, while the interest portion decreases each month.</p>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q1">What is the difference between equal payment and equal principal?</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">Equal payment (等额本息) keeps your monthly payment the same throughout the loan term, making it easier to budget. Equal principal (等额本金) means you pay a fixed amount of principal each month plus decreasing interest, resulting in higher initial payments that gradually decrease over time. Equal principal typically results in less total interest paid.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q2">How much should my down payment be?</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">While a 20% down payment is traditional and helps you avoid Private Mortgage Insurance (PMI), many loan programs allow for lower down payments. FHA loans may require as little as 3.5%, and some VA and USDA loans require no down payment. However, a larger down payment means lower monthly payments and less total interest.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q3">Should I choose a 15-year or 30-year mortgage?</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">A 15-year mortgage has higher monthly payments but significantly less total interest. A 30-year mortgage offers lower monthly payments but costs more over the life of the loan. Choose based on your budget and financial goals. If you can comfortably afford the higher payments, a 15-year mortgage can save you tens of thousands in interest.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q4">Can I pay off my mortgage early?</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">Yes, most mortgages allow early payoff, but some may charge a prepayment penalty. Check your loan agreement for details. Making extra payments - even small ones - can significantly reduce your total interest and shorten your loan term. Use our calculator to see how extra payments would affect your loan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Ad -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1960589035364427"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><em>Disclaimer: This calculator is for reference only. Please consult your lender for exact figures.</em></p>
+            <p><em>免责声明：本计算器仅供参考，请咨询您的贷款机构获取准确数据。</em></p>
+            <br>
+            <div class="footer-links">
+                <a href="index.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="terms-of-service.html">Terms</a>
+            </div>
+            <p>&copy; 2026 Mortgage Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Language System =====
+        let currentLang = 'en';
+        let currentMethod = 'equal-payment';
+        let scheduleExpanded = false;
+
+        const translations = {
+            en: {
+                logo: 'Mortgage Calculator',
+                guide_link: '📖 Mortgage Guide',
+                calc_title: 'Mortgage Calculator',
+                calc_subtitle: 'Calculate your monthly mortgage payment with ease',
+                label_price: 'Property Price',
+                label_down: 'Down Payment',
+                label_rate: 'Interest Rate',
+                label_term: 'Loan Term',
+                label_method: 'Payment Method',
+                label_currency: 'Currency',
+                method_equal_payment: 'Equal Payment (等额本息)',
+                method_equal_principal: 'Equal Principal (等额本金)',
+                years: 'years',
+                hint_down: 'Typically 20% of property price',
+                hint_rate: 'Annual interest rate',
+                btn_calculate: 'Calculate',
+                results_title: 'Calculation Results',
+                result_monthly: 'Monthly Payment',
+                result_loan: 'Loan Amount',
+                result_interest: 'Total Interest',
+                result_total: 'Total Payment',
+                result_payoff: 'Payoff Date',
+                chart_title: 'Principal vs Interest',
+                legend_principal: 'Principal',
+                legend_interest: 'Interest',
+                schedule_title: 'Amortization Schedule',
+                col_month: 'Month',
+                col_payment: 'Payment',
+                col_principal: 'Principal',
+                col_interest: 'Interest',
+                col_balance: 'Balance',
+                btn_show_all: 'Show Full Schedule',
+                btn_collapse: 'Collapse Schedule',
+                info_how_title: 'How Mortgage Calculation Works',
+                info_how_p1: 'A mortgage is a type of loan used to purchase real estate. When you take out a mortgage, you borrow money from a lender and agree to pay it back over a set period, typically 15 to 30 years, with interest. The mortgage payment consists of two main components: principal (the amount you borrowed) and interest (the cost of borrowing).',
+                info_how_p2: 'The interest rate can be fixed (stays the same for the life of the loan) or adjustable (can change periodically). Your monthly payment amount depends on the loan amount, interest rate, loan term, and the repayment method you choose. Understanding these factors is crucial for making an informed decision about your home purchase.',
+                tips_title: 'Mortgage Tips',
+                tip_1: 'Save at least 20% for your down payment to avoid Private Mortgage Insurance (PMI) and get better interest rates.',
+                tip_2: 'Check your credit score before applying - a higher score typically qualifies you for lower interest rates.',
+                tip_3: 'Compare offers from multiple lenders to find the best rate and terms for your situation.',
+                tip_4: 'Consider the total cost of the loan, not just the monthly payment, including closing costs and fees.',
+                tip_5: 'Make extra payments when possible to reduce your total interest and shorten your loan term.',
+                formula_title: 'Calculation Formula',
+                formula_equal_payment_title: 'Equal Payment (等额本息)',
+                formula_equal_payment_desc: 'M = Monthly Payment, P = Loan Amount (Principal), r = Monthly Interest Rate (Annual Rate / 12), n = Total Number of Payments (Years × 12)',
+                formula_equal_principal_title: 'Equal Principal (等额本金)',
+                formula_equal_principal_desc: 'Mi = Payment for Month i, P = Loan Amount, n = Total Payments, r = Monthly Interest Rate. The principal portion is fixed, while the interest portion decreases each month.',
+                faq_title: 'Frequently Asked Questions',
+                faq_q1: 'What is the difference between equal payment and equal principal?',
+                faq_a1: 'Equal payment (等额本息) keeps your monthly payment the same throughout the loan term, making it easier to budget. Equal principal (等额本金) means you pay a fixed amount of principal each month plus decreasing interest, resulting in higher initial payments that gradually decrease over time. Equal principal typically results in less total interest paid.',
+                faq_q2: 'How much should my down payment be?',
+                faq_a2: 'While a 20% down payment is traditional and helps you avoid Private Mortgage Insurance (PMI), many loan programs allow for lower down payments. FHA loans may require as little as 3.5%, and some VA and USDA loans require no down payment. However, a larger down payment means lower monthly payments and less total interest.',
+                faq_q3: 'Should I choose a 15-year or 30-year mortgage?',
+                faq_a3: 'A 15-year mortgage has higher monthly payments but significantly less total interest. A 30-year mortgage offers lower monthly payments but costs more over the life of the loan. Choose based on your budget and financial goals. If you can comfortably afford the higher payments, a 15-year mortgage can save you tens of thousands in interest.',
+                faq_q4: 'Can I pay off my mortgage early?',
+                faq_a4: 'Yes, most mortgages allow early payoff, but some may charge a prepayment penalty. Check your loan agreement for details. Making extra payments - even small ones - can significantly reduce your total interest and shorten your loan term. Use our calculator to see how extra payments would affect your loan.',
+                disclaimer_en: 'Disclaimer: This calculator is for reference only. Please consult your lender for exact figures.',
+                disclaimer_zh: '免责声明：本计算器仅供参考，请咨询您的贷款机构获取准确数据。',
+                copyright: '© 2026 Mortgage Calculator. All rights reserved.'
+            },
+            zh: {
+                logo: '房贷计算器',
+                guide_link: '📖 房贷指南',
+                calc_title: '房贷计算器',
+                calc_subtitle: '轻松计算您的每月房贷还款额',
+                label_price: '房价',
+                label_down: '首付金额',
+                label_rate: '贷款利率',
+                label_term: '贷款期限',
+                label_method: '还款方式',
+                label_currency: '货币',
+                method_equal_payment: '等额本息',
+                method_equal_principal: '等额本金',
+                years: '年',
+                hint_down: '通常为房价的20%',
+                hint_rate: '年利率',
+                btn_calculate: '开始计算',
+                results_title: '计算结果',
+                result_monthly: '每月还款',
+                result_loan: '贷款金额',
+                result_interest: '利息总额',
+                result_total: '还款总额',
+                result_payoff: '还清日期',
+                chart_title: '本金与利息比例',
+                legend_principal: '本金',
+                legend_interest: '利息',
+                schedule_title: '还款明细表',
+                col_month: '期数',
+                col_payment: '还款额',
+                col_principal: '本金',
+                col_interest: '利息',
+                col_balance: '剩余本金',
+                btn_show_all: '查看完整明细',
+                btn_collapse: '收起明细',
+                info_how_title: '房贷计算原理',
+                info_how_p1: '房贷是一种用于购买房产的贷款。当您申请房贷时，您向贷款机构借款，并同意在约定的期限内（通常15到30年）连同利息一起偿还。房贷还款由两部分组成：本金（您借入的金额）和利息（借款的成本）。',
+                info_how_p2: '利率可以是固定的（在整个贷款期间保持不变）或可调整的（可以定期变化）。您的月供金额取决于贷款金额、利率、贷款期限和您选择的还款方式。了解这些因素对于做出明智的购房决策至关重要。',
+                tips_title: '房贷建议',
+                tip_1: '首付至少准备20%，以避免私人房贷保险（PMI）并获得更好的利率。',
+                tip_2: '申请前检查您的信用评分 - 较高的评分通常可以获得更低的利率。',
+                tip_3: '比较多家贷款机构的报价，找到最适合您的利率和条件。',
+                tip_4: '考虑贷款的总成本，而不仅仅是月供，包括手续费和各项费用。',
+                tip_5: '尽可能多还款，以减少总利息并缩短贷款期限。',
+                formula_title: '计算公式',
+                formula_equal_payment_title: '等额本息',
+                formula_equal_payment_desc: 'M = 每月还款额, P = 贷款本金, r = 月利率（年利率/12）, n = 还款总期数（年×12）',
+                formula_equal_principal_title: '等额本金',
+                formula_equal_principal_desc: 'Mi = 第i期还款额, P = 贷款本金, n = 还款总期数, r = 月利率。每期本金固定，利息逐月递减。',
+                faq_title: '常见问题',
+                faq_q1: '等额本息和等额本金有什么区别？',
+                faq_a1: '等额本息每月还款金额相同，便于预算管理。等额本金每月偿还固定本金加上逐月递减的利息，初期还款额较高，之后逐渐降低。等额本金通常总利息更少。',
+                faq_q2: '首付应该准备多少？',
+                faq_a2: '传统上首付为房价的20%，可以避免私人房贷保险（PMI）。但许多贷款项目允许更低的首付，FHA贷款最低仅需3.5%，部分VA和USDA贷款甚至零首付。不过更大的首付意味着更低的月供和更少的总利息。',
+                faq_q3: '应该选择15年还是30年房贷？',
+                faq_a3: '15年房贷月供较高但总利息大幅减少。30年房贷月供较低但总成本更高。根据您的预算和财务目标选择。如果您能轻松承担较高的月供，15年房贷可以为您节省数万元利息。',
+                faq_q4: '可以提前还清房贷吗？',
+                faq_a4: '大多数房贷允许提前还款，但有些可能会收取提前还款违约金。请查看您的贷款协议了解详情。即使少量额外还款也能显著减少总利息并缩短贷款期限。',
+                disclaimer_en: 'Disclaimer: This calculator is for reference only. Please consult your lender for exact figures.',
+                disclaimer_zh: '免责声明：本计算器仅供参考，请咨询您的贷款机构获取准确数据。',
+                copyright: '© 2026 Mortgage Calculator. All rights reserved.'
+            }
+        };
+
+        const currencySymbols = {
+            USD: '$', CNY: '¥', EUR: '€', GBP: '£',
+            AUD: 'A$', CAD: 'C$', JPY: '¥', SGD: 'S$'
+        };
+
+        const months_en = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+
+            const t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'SELECT') return;
+                    el.textContent = t[key];
+                }
+            });
+
+            // Update term select options
+            const termSelect = document.getElementById('loanTerm');
+            Array.from(termSelect.options).forEach(opt => {
+                opt.textContent = opt.value + ' ' + t.years;
+            });
+
+            // Re-render results if visible
+            if (document.getElementById('results').style.display !== 'none') {
+                calculate();
+            }
+        }
+
+        function setMethod(method) {
+            currentMethod = method;
+            document.getElementById('method-equal-payment').classList.toggle('active', method === 'equal-payment');
+            document.getElementById('method-equal-principal').classList.toggle('active', method === 'equal-principal');
+        }
+
+        function updateCurrencySymbol() {
+            const currency = document.getElementById('currency').value;
+            const symbol = currencySymbols[currency];
+            document.getElementById('currency-symbol').textContent = symbol;
+            document.getElementById('currency-symbol-down').textContent = symbol;
+        }
+
+        function formatMoney(amount, currency) {
+            currency = currency || document.getElementById('currency').value;
+            const symbol = currencySymbols[currency];
+            if (currency === 'JPY') {
+                return symbol + Math.round(amount).toLocaleString('en-US');
+            }
+            return symbol + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function calculate() {
+            const propertyPrice = parseFloat(document.getElementById('propertyPrice').value) || 0;
+            const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+            const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
+            const termYears = parseInt(document.getElementById('loanTerm').value) || 30;
+            const currency = document.getElementById('currency').value;
+
+            const loanAmount = propertyPrice - downPayment;
+            if (loanAmount <= 0 || annualRate <= 0) return;
+
+            const monthlyRate = annualRate / 100 / 12;
+            const totalMonths = termYears * 12;
+            const schedule = [];
+
+            let totalPayment = 0;
+            let totalInterest = 0;
+            let balance = loanAmount;
+
+            if (currentMethod === 'equal-payment') {
+                // Equal Payment (等额本息)
+                const monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+
+                for (let i = 1; i <= totalMonths; i++) {
+                    const interestPayment = balance * monthlyRate;
+                    const principalPayment = monthlyPayment - interestPayment;
+                    balance = Math.max(0, balance - principalPayment);
+                    totalInterest += interestPayment;
+                    schedule.push({
+                        month: i,
+                        payment: monthlyPayment,
+                        principal: principalPayment,
+                        interest: interestPayment,
+                        balance: balance
+                    });
+                }
+                totalPayment = monthlyPayment * totalMonths;
+
+                document.getElementById('monthlyPayment').textContent = formatMoney(monthlyPayment, currency);
+            } else {
+                // Equal Principal (等额本金)
+                const monthlyPrincipal = loanAmount / totalMonths;
+                let firstPayment = 0;
+
+                for (let i = 1; i <= totalMonths; i++) {
+                    const interestPayment = balance * monthlyRate;
+                    const payment = monthlyPrincipal + interestPayment;
+                    balance = Math.max(0, balance - monthlyPrincipal);
+                    totalInterest += interestPayment;
+                    totalPayment += payment;
+                    if (i === 1) firstPayment = payment;
+                    schedule.push({
+                        month: i,
+                        payment: payment,
+                        principal: monthlyPrincipal,
+                        interest: interestPayment,
+                        balance: balance
+                    });
+                }
+
+                document.getElementById('monthlyPayment').textContent = formatMoney(firstPayment, currency) + ' - ' + formatMoney(schedule[schedule.length - 1].payment, currency);
+            }
+
+            document.getElementById('loanAmount').textContent = formatMoney(loanAmount, currency);
+            document.getElementById('totalInterest').textContent = formatMoney(totalInterest, currency);
+            document.getElementById('totalPayment').textContent = formatMoney(totalPayment, currency);
+
+            // Payoff Date
+            const now = new Date();
+            const payoffDate = new Date(now.getFullYear(), now.getMonth() + totalMonths);
+            const payoffStr = months_en[payoffDate.getMonth()] + ' ' + payoffDate.getFullYear();
+            document.getElementById('payoffDate').textContent = payoffStr;
+
+            // Chart
+            const principalPercent = ((loanAmount / totalPayment) * 100).toFixed(1);
+            const interestPercent = ((totalInterest / totalPayment) * 100).toFixed(1);
+            document.getElementById('principal-bar').style.width = principalPercent + '%';
+            document.getElementById('principal-bar').textContent = principalPercent + '%';
+            document.getElementById('interest-bar').style.width = interestPercent + '%';
+            document.getElementById('interest-bar').textContent = interestPercent + '%';
+
+            // Amortization Table
+            const tbody = document.getElementById('amortization-body');
+            tbody.innerHTML = '';
+            const showAll = scheduleExpanded;
+            const displaySchedule = showAll ? schedule : schedule.slice(0, 12);
+
+            displaySchedule.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = '<td>' + row.month + '</td>' +
+                    '<td>' + formatMoney(row.payment, currency) + '</td>' +
+                    '<td>' + formatMoney(row.principal, currency) + '</td>' +
+                    '<td>' + formatMoney(row.interest, currency) + '</td>' +
+                    '<td>' + formatMoney(row.balance, currency) + '</td>';
+                tbody.appendChild(tr);
+            });
+
+            // Toggle button
+            const toggleBtn = document.getElementById('toggle-schedule');
+            if (schedule.length <= 12) {
+                toggleBtn.style.display = 'none';
+                document.getElementById('table-wrapper').classList.add('expanded');
+            } else {
+                toggleBtn.style.display = 'inline-block';
+                toggleBtn.textContent = currentLang === 'en' ? (showAll ? 'Collapse Schedule' : 'Show Full Schedule') : (showAll ? '收起明细' : '查看完整明细');
+                document.getElementById('table-wrapper').classList.toggle('expanded', showAll);
+            }
+
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function toggleSchedule() {
+            scheduleExpanded = !scheduleExpanded;
+            calculate();
+        }
+
+        function toggleFaq(btn) {
+            btn.parentElement.classList.toggle('active');
+        }
+
+        // Auto-calculate on Enter key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') calculate();
+        });
+
+        // Auto-calculate on load
+        window.addEventListener('DOMContentLoaded', function() {
+            calculate();
+        });
+    </script>
+
 </body>
 </html>
