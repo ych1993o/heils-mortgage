@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>房贷指南 - 房贷计算器</title>
+<title data-i18n="blog_title">房贷指南 - 房贷计算器</title>
 <meta name="description" content="heils.top 房贷计算器知识房贷指南，涵盖等额本息与等额本金、提前还款、LPR利率、首付比例等房贷实用知识。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -146,105 +146,252 @@
     border-top: 1px solid #e2e8f0;
     background: #ffffff;
   }
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    color: #2563eb;
+    background: #eff6ff;
+    font-weight: 600;
+  }
+  .lang-divider {
+    color: #cbd5e1;
+  }
 </style>
 </head>
 <body>
 <nav>
 <div style="max-width:800px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;">
-<a href="../index.html" style="font-size:20px;text-decoration:none;color:#2563eb;">🏠 房贷计算器</a>
-<a href="../index.html" style="text-decoration:none;color:#475569;font-size:14px;">← 返回首页</a>
+<a href="../index.html" style="font-size:20px;text-decoration:none;color:#2563eb;" data-i18n="title">🏠 房贷计算器</a>
+<div style="display:flex;align-items:center;gap:12px;">
+<div class="lang-switch">
+<button class="lang-btn active" data-lang="zh">中文</button>
+<span class="lang-divider">|</span>
+<button class="lang-btn" data-lang="en">EN</button>
+</div>
+<a href="../index.html" style="text-decoration:none;color:#475569;font-size:14px;" data-i18n="back_home">← 返回首页</a>
+</div>
 </div>
 </nav>
 
 <main>
 <header class="page-head">
-<h1>房贷指南</h1>
-<p>实用的房贷计算与还款攻略，帮你做出最省钱的购房决策</p>
+<h1 data-i18n="blog_h1">房贷指南</h1>
+<p data-i18n="blog_subtitle">实用的房贷计算与还款攻略，帮你做出最省钱的购房决策</p>
 </header>
 
 <section class="intro">
-<p>欢迎来到 heils.top 房贷指南！这里汇集了从还款方式选择、提前还款策略到利率抉择、首付规划等全方位的房贷实用指南。每一篇文章都配有清晰的计算示例，帮你把复杂的房贷算明白。想要快速试算自己的月供与利息？前往 <a href="../index.html">房贷计算器</a> 即时测算。</p>
+<p data-i18n="blog_intro">欢迎来到 heils.top 房贷指南！这里汇集了从还款方式选择、提前还款策略到利率抉择、首付规划等全方位的房贷实用指南。每一篇文章都配有清晰的计算示例，帮你把复杂的房贷算明白。想要快速试算自己的月供与利息？前往 <a href="../index.html">房贷计算器</a> 即时测算。</p>
 </section>
 
 <section class="grid">
 
 <a class="card" href="equal-payment-vs-equal-principal.html">
-<span class="card-tag">还款方式</span>
-<h2>等额本息 vs 等额本金哪个更划算？详细对比分析</h2>
-<p class="desc">深入对比等额本息与等额本金两种还款方式的月供、总利息与适用人群，附计算示例，帮你选择最划算的方案。</p>
+<span class="card-tag" data-i18n="tag_repayment">还款方式</span>
+<h2 data-i18n="article1_title">等额本息 vs 等额本金哪个更划算？详细对比分析</h2>
+<p class="desc" data-i18n="article1_desc">深入对比等额本息与等额本金两种还款方式的月供、总利息与适用人群，附计算示例，帮你选择最划算的方案。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="prepayment-guide.html">
-<span class="card-tag">提前还款</span>
-<h2>提前还房贷划算吗？2026年最新计算方法详解</h2>
-<p class="desc">2026年最新提前还房贷计算方法，判断什么情况下提前还款最划算，避开违约金与资金浪费陷阱。</p>
+<span class="card-tag" data-i18n="tag_prepay">提前还款</span>
+<h2 data-i18n="article2_title">提前还房贷划算吗？2026年最新计算方法详解</h2>
+<p class="desc" data-i18n="article2_desc">2026年最新提前还房贷计算方法，判断什么情况下提前还款最划算，避开违约金与资金浪费陷阱。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="lpr-vs-fixed-rate.html">
-<span class="card-tag">利率选择</span>
-<h2>LPR浮动利率 vs 固定利率怎么选？2026年指南</h2>
-<p class="desc">详解LPR浮动利率与固定利率的区别、优缺点及选择策略，附2026年利率走势分析与决策建议。</p>
+<span class="card-tag" data-i18n="tag_rate">利率选择</span>
+<h2 data-i18n="article3_title">LPR浮动利率 vs 固定利率怎么选？2026年指南</h2>
+<p class="desc" data-i18n="article3_desc">详解LPR浮动利率与固定利率的区别、优缺点及选择策略，附2026年利率走势分析与决策建议。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="monthly-payment-ratio.html">
-<span class="card-tag">还款规划</span>
-<h2>房贷月供占收入多少合适？科学规划你的还款能力</h2>
-<p class="desc">科学确定房贷月供占月收入的比例，平衡生活质量与还款压力，合理规划家庭财务，避免过度负债。</p>
+<span class="card-tag" data-i18n="tag_plan">还款规划</span>
+<h2 data-i18n="article4_title">房贷月供占收入多少合适？科学规划你的还款能力</h2>
+<p class="desc" data-i18n="article4_desc">科学确定房贷月供占月收入的比例，平衡生活质量与还款压力，合理规划家庭财务，避免过度负债。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="provident-fund-vs-commercial-loan.html">
-<span class="card-tag">贷款类型</span>
-<h2>公积金贷款和商业贷款区别详解，哪个更省钱？</h2>
-<p class="desc">全面对比公积金贷款与商业贷款的利率、额度、申请条件，计算哪种组合贷款方式最省钱。</p>
+<span class="card-tag" data-i18n="tag_type">贷款类型</span>
+<h2 data-i18n="article5_title">公积金贷款和商业贷款区别详解，哪个更省钱？</h2>
+<p class="desc" data-i18n="article5_desc">全面对比公积金贷款与商业贷款的利率、额度、申请条件，计算哪种组合贷款方式最省钱。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="down-payment-guide.html">
-<span class="card-tag">首付策略</span>
-<h2>买房首付比例最新规定及首付策略分析</h2>
-<p class="desc">2026年最新买房首付比例规定，首套房与二套房首付政策解读，以及首付金额的规划策略建议。</p>
+<span class="card-tag" data-i18n="tag_down">首付策略</span>
+<h2 data-i18n="article6_title">买房首付比例最新规定及首付策略分析</h2>
+<p class="desc" data-i18n="article6_desc">2026年最新买房首付比例规定，首套房与二套房首付政策解读，以及首付金额的规划策略建议。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="mortgage-rejection-reasons.html">
-<span class="card-tag">审批攻略</span>
-<h2>房贷审批被拒的常见原因及应对方法</h2>
-<p class="desc">盘点房贷审批被拒的常见原因，包括征信瑕疵、收入不足、负债过高等问题，并提供实用应对解决方案。</p>
+<span class="card-tag" data-i18n="tag_approval">审批攻略</span>
+<h2 data-i18n="article7_title">房贷审批被拒的常见原因及应对方法</h2>
+<p class="desc" data-i18n="article7_desc">盘点房贷审批被拒的常见原因，包括征信瑕疵、收入不足、负债过高等问题，并提供实用应对解决方案。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="mortgage-transfer-risks.html">
-<span class="card-tag">风险警示</span>
-<h2>房贷转贷降息靠谱吗？转贷风险全解析</h2>
-<p class="desc">揭秘经营贷置换房贷的转贷降息套路，解析法律风险、银行抽贷风险，以及合规降息的正确方式。</p>
+<span class="card-tag" data-i18n="tag_risk">风险警示</span>
+<h2 data-i18n="article8_title">房贷转贷降息靠谱吗？转贷风险全解析</h2>
+<p class="desc" data-i18n="article8_desc">揭秘经营贷置换房贷的转贷降息套路，解析法律风险、银行抽贷风险，以及合规降息的正确方式。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 <a class="card" href="extra-payment-strategy.html">
-<span class="card-tag">省息技巧</span>
-<h2>房贷多还策略：如何通过额外还款省下几十万利息</h2>
-<p class="desc">用实际计算说明额外还款的省息威力，对比缩短年限与减少月供的差异，每年多还1万竟能省20万利息。</p>
+<span class="card-tag" data-i18n="tag_save">省息技巧</span>
+<h2 data-i18n="article9_title">房贷多还策略：如何通过额外还款省下几十万利息</h2>
+<p class="desc" data-i18n="article9_desc">用实际计算说明额外还款的省息威力，对比缩短年限与减少月供的差异，每年多还1万竟能省20万利息。</p>
 <p class="date">📅 2026-07-15</p>
-<p class="more">阅读全文 →</p>
+<p class="more" data-i18n="read_more">阅读全文 →</p>
 </a>
 
 </section>
 </main>
 
 <footer>
-© 2026 heils.top 房贷计算器
+<p data-i18n="footer_text">© 2026 heils.top 房贷计算器</p>
 </footer>
+
+<script>
+const blogTranslations = {
+  zh: {
+    title: "🏠 房贷计算器",
+    back_home: "← 返回首页",
+    blog_h1: "房贷指南",
+    blog_subtitle: "实用的房贷计算与还款攻略，帮你做出最省钱的购房决策",
+    blog_intro: "欢迎来到 heils.top 房贷指南！这里汇集了从还款方式选择、提前还款策略到利率抉择、首付规划等全方位的房贷实用指南。每一篇文章都配有清晰的计算示例，帮你把复杂的房贷算明白。想要快速试算自己的月供与利息？前往 房贷计算器 即时测算。",
+    tag_repayment: "还款方式",
+    tag_prepay: "提前还款",
+    tag_rate: "利率选择",
+    tag_plan: "还款规划",
+    tag_type: "贷款类型",
+    tag_down: "首付策略",
+    tag_approval: "审批攻略",
+    tag_risk: "风险警示",
+    tag_save: "省息技巧",
+    article1_title: "等额本息 vs 等额本金哪个更划算？详细对比分析",
+    article1_desc: "深入对比等额本息与等额本金两种还款方式的月供、总利息与适用人群，附计算示例，帮你选择最划算的方案。",
+    article2_title: "提前还房贷划算吗？2026年最新计算方法详解",
+    article2_desc: "2026年最新提前还房贷计算方法，判断什么情况下提前还款最划算，避开违约金与资金浪费陷阱。",
+    article3_title: "LPR浮动利率 vs 固定利率怎么选？2026年指南",
+    article3_desc: "详解LPR浮动利率与固定利率的区别、优缺点及选择策略，附2026年利率走势分析与决策建议。",
+    article4_title: "房贷月供占收入多少合适？科学规划你的还款能力",
+    article4_desc: "科学确定房贷月供占月收入的比例，平衡生活质量与还款压力，合理规划家庭财务，避免过度负债。",
+    article5_title: "公积金贷款和商业贷款区别详解，哪个更省钱？",
+    article5_desc: "全面对比公积金贷款与商业贷款的利率、额度、申请条件，计算哪种组合贷款方式最省钱。",
+    article6_title: "买房首付比例最新规定及首付策略分析",
+    article6_desc: "2026年最新买房首付比例规定，首套房与二套房首付政策解读，以及首付金额的规划策略建议。",
+    article7_title: "房贷审批被拒的常见原因及应对方法",
+    article7_desc: "盘点房贷审批被拒的常见原因，包括征信瑕疵、收入不足、负债过高等问题，并提供实用应对解决方案。",
+    article8_title: "房贷转贷降息靠谱吗？转贷风险全解析",
+    article8_desc: "揭秘经营贷置换房贷的转贷降息套路，解析法律风险、银行抽贷风险，以及合规降息的正确方式。",
+    article9_title: "房贷多还策略：如何通过额外还款省下几十万利息",
+    article9_desc: "用实际计算说明额外还款的省息威力，对比缩短年限与减少月供的差异，每年多还1万竟能省20万利息。",
+    read_more: "阅读全文 →",
+    footer_text: "© 2026 heils.top 房贷计算器"
+  },
+  en: {
+    title: "🏠 Mortgage Calculator",
+    back_home: "← Back to Home",
+    blog_h1: "Mortgage Guide",
+    blog_subtitle: "Practical mortgage calculation and repayment strategies to help you make the most cost-effective home buying decisions",
+    blog_intro: "Welcome to heils.top Mortgage Guide! Here you'll find comprehensive practical guides covering repayment method selection, prepayment strategies, interest rate decisions, down payment planning, and more. Each article includes clear calculation examples to help you understand complex mortgage matters. Want to quickly calculate your monthly payments and interest? Go to the Mortgage Calculator for instant estimates.",
+    tag_repayment: "Repayment Method",
+    tag_prepay: "Prepayment",
+    tag_rate: "Interest Rate",
+    tag_plan: "Repayment Planning",
+    tag_type: "Loan Type",
+    tag_down: "Down Payment",
+    tag_approval: "Approval Guide",
+    tag_risk: "Risk Alert",
+    tag_save: "Interest Saving",
+    article1_title: "Equal Payment vs Equal Principal: Which is Better? Detailed Comparison",
+    article1_desc: "In-depth comparison of monthly payments, total interest, and suitable groups for equal payment and equal principal methods, with calculation examples to help you choose the most cost-effective option.",
+    article2_title: "Is Prepaying Your Mortgage Worth It? 2026 Latest Calculation Methods",
+    article2_desc: "2026 latest prepayment calculation methods, determining when prepayment is most cost-effective, avoiding penalty fees and wasted funds.",
+    article3_title: "LPR Floating Rate vs Fixed Rate: How to Choose? 2026 Guide",
+    article3_desc: "Detailed explanation of differences, pros and cons, and selection strategies between LPR floating rate and fixed rate, with 2026 interest rate trend analysis and decision recommendations.",
+    article4_title: "What Percentage of Income Should Mortgage Payments Be? Scientific Planning",
+    article4_desc: "Scientifically determine the proportion of monthly mortgage payments to monthly income, balancing quality of life and repayment pressure, reasonably planning family finances to avoid excessive debt.",
+    article5_title: "Provident Fund Loan vs Commercial Loan: Detailed Comparison, Which Saves More?",
+    article5_desc: "Comprehensive comparison of interest rates, limits, and application conditions between provident fund loans and commercial loans, calculating which combination is most cost-effective.",
+    article6_title: "Latest Down Payment Regulations and Strategy Analysis for Home Buying",
+    article6_desc: "2026 latest down payment regulations for home buying, first-home and second-home down payment policy interpretation, and down payment amount planning strategy recommendations.",
+    article7_title: "Common Reasons for Mortgage Application Rejection and Solutions",
+    article7_desc: "Review of common reasons for mortgage application rejection, including credit issues, insufficient income, excessive debt, and providing practical solutions.",
+    article8_title: "Is Mortgage Refinancing for Lower Rates Reliable? Complete Risk Analysis",
+    article8_desc: "Revealing the tricks of mortgage refinancing for lower rates, analyzing legal risks, bank loan recall risks, and the correct way to legally reduce interest rates.",
+    article9_title: "Mortgage Overpayment Strategy: How to Save Hundreds of Thousands in Interest",
+    article9_desc: "Using actual calculations to illustrate the interest-saving power of extra payments, comparing the differences between shortening the term and reducing monthly payments, saving 200,000 in interest by paying an extra 10,000 per year.",
+    read_more: "Read More →",
+    footer_text: "© 2026 heils.top Mortgage Calculator"
+  }
+};
+
+let currentLang = 'zh';
+
+function switchLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (blogTranslations[lang][key]) {
+      element.textContent = blogTranslations[lang][key];
+    }
+  });
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  
+  try {
+    localStorage.setItem('preferred-lang', lang);
+  } catch(e) {}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  let savedLang = 'zh';
+  try {
+    savedLang = localStorage.getItem('preferred-lang') || 'zh';
+  } catch(e) {}
+  
+  if (!savedLang) {
+    const browserLang = navigator.language || navigator.userLanguage;
+    savedLang = browserLang.startsWith('zh') ? 'zh' : 'en';
+  }
+  
+  switchLanguage(savedLang);
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+  });
+});
+</script>
 </body>
 </html>

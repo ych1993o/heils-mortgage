@@ -62,7 +62,10 @@ const translations = {
         about: "About",
         contact: "Contact",
         privacy_policy: "Privacy Policy",
-        terms: "Terms"
+        terms: "Terms",
+        blog_guide: "Mortgage Guide",
+        back_home: "← Back to Home",
+        read_more: "Read More →"
     },
     zh: {
         title: "房贷计算器",
@@ -126,7 +129,10 @@ const translations = {
         about: "关于我们",
         contact: "联系我们",
         privacy_policy: "隐私政策",
-        terms: "服务条款"
+        terms: "服务条款",
+        blog_guide: "房贷指南",
+        back_home: "← 返回首页",
+        read_more: "阅读全文 →"
     }
 };
 
